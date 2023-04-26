@@ -2,7 +2,7 @@ let contacts = {
     bff: 1234567,
     mom: 5555555,
     bro: 9876543
-}
+};
 
 
 console.log(contacts);
@@ -45,7 +45,7 @@ let dog = {
     age: 9,
     size: 'medium',
     barks:true
-}
+};
 console.log(dog);
 
 let bob = {
@@ -54,7 +54,7 @@ let bob = {
     age: 3,
     size: 'small',
     barks:true
-}
+};
 console.log(bob);
 
 let princess = {
@@ -63,7 +63,7 @@ let princess = {
     age: 10,
     size: 'large',
     Toddlers: '23'
-}
+};
 console.log(princess);
 
 let destroyer = {
@@ -72,7 +72,7 @@ let destroyer = {
     age: 12,
     size: 'large',
     barks:true
-}
+};
 console.log(destroyer);
 let zeus = {
     dogName: 'zeus',
@@ -80,6 +80,6 @@ let zeus = {
     age: 9,
     size: 'medium',
     barks:true
-}
+};
 console.log(zeus);
 

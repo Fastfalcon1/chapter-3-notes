@@ -2,6 +2,12 @@ const readLine = require('readline-sync');
 
 let diceRolled = [];
 
+let eyeColors = ['blue','green','brown'];
+
+let race = ['White', 'mexican', 'Asian', 'African' ,'American'];
+
+let job = ['cook', 'librarian', 'teacher'];
+
 let character = {
 
 //empty to start
@@ -54,10 +60,18 @@ function rollStat(list){
 
 }
 
+function pickRandomChoice(choices){
+    let randomNum = Math.floor(Math.random()*choices.length);
+    return choices[randomNum]
+}
+
 function createChar(list){
 
     character.name = readLine.question("Enter Character Name: ");
-
+    character.age = rollStat(diceRolled);
+    character.Race = pickRandomChoice(race);
+    character.job = pickRandomChoice(job);
+    character.eyeColor = pickRandomChoice(eyeColors);
     console.log('Rolling STR');
 
     character.strength= rollStat(diceRolled);
@@ -81,14 +95,24 @@ function createChar(list){
     console.log('Rolling CHA');
 
     character.charisma= rollStat(diceRolled);
+    character.luck = rolld6();
 
-    console.log(character)
+
+    displayChar(character)
 
 }
 
 function displayChar(char){
 
     console.log(`Name: ${char.name}`);
+
+    console.log(`Age: ${char.age}`);
+
+    console.log(`Race: ${char.Race}`);
+
+    console.log(`Job: ${char.job}`);
+
+    console.log(`Eye Color: ${char.eyeColor}`);
 
     console.log(`STR: ${char.strength}`);
 
@@ -101,5 +125,12 @@ function displayChar(char){
     console.log(`WIS: ${char.wisdom}`);
 
     console.log(`CHA: ${char.charisma}`);
+
+    console.log(`Luck: ${char.luck}`);
+
+
+
+    console.log(`------------------------------`);
+
 
 }
